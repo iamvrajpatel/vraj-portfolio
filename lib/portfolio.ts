@@ -29,7 +29,7 @@ export const portfolio = {
     linkedin: "https://linkedin.com/in/iamvrajpatel",
     leetcode: "https://leetcode.com/u/ervrajpatel",
     resume: "/assets/vraj-patel-ai-engineer-resume.pdf",
-    portrait: "/assets/vraj-patel.jpg",
+    portrait: "/assets/vraj-patel.png",
   },
   hero: {
     headlineLines: [
@@ -152,7 +152,7 @@ export const experience: readonly ExperienceEntry[] = [
 ];
 
 export const education = [
-  { school: "WorldQuant University", degree: "M.S. Financial Engineering", period: "June 2025 – Expected July 2027" },
+  { school: "Indian Institute of Quantitative Finance", degree: "Post Graduate Program in Algorithmic Trading", period: "Oct 2025 – Expected March 2027" },
   { school: "G H Patel College of Engineering and Technology", degree: "B.E. Computer Engineering · CPI: 8.2/10", period: "September 2020 – May 2024" },
 ] as const;
 

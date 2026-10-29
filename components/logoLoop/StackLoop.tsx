@@ -189,7 +189,7 @@ export function StackLoop({ withHeading = false }: StackLoopProps): ReactNode {
         {withHeading ? (
           <FadeIn className="flex flex-col items-center gap-5 pt-12 pb-10 text-center sm:pt-20 sm:pb-14">
             <Shuffle
-              text="AI engineering stack"
+              text="AI Engineering Stack"
               tag="h2"
               className="text-foreground font-serif text-[2.5rem] leading-[1.05] font-medium tracking-tight md:text-[3rem] lg:text-[3.5rem]"
               shuffleDirection="right"
