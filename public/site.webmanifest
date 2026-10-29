@@ -1,0 +1,17 @@
+{
+  "name": "Vraj Patel — AI / Applied AI Engineer",
+  "short_name": "Vraj Patel",
+  "description": "Portfolio of Vraj Patel, an AI / Applied AI Engineer specializing in LLMs, RAG, agentic AI, and computer vision.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
