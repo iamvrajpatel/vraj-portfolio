@@ -3,7 +3,9 @@ import { PageBackdrop } from "@/components/layout/page-backdrop";
 import { Providers } from "@/components/layout/providers";
 import { ScrollToTop } from "@/components/layout/scroll-to-top";
 import { SkipToContent } from "@/components/layout/skip-to-content";
+import { JsonLd } from "@/components/seo/json-ld";
 import { baseMetadata } from "@/lib/metadata";
+import { websiteStructuredData } from "@/lib/structured-data";
 import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Rubik, Space_Grotesk } from "next/font/google";
 import type { ReactNode } from "react";
@@ -50,6 +52,7 @@ export default function RootLayout({
       <body
         className="min-h-screen bg-background font-sans text-foreground antialiased"
       >
+        <JsonLd data={websiteStructuredData} />
         <Providers>
           <div className="site-frame site-frame--top" aria-hidden="true" />
           <div className="site-frame site-frame--left" aria-hidden="true" />

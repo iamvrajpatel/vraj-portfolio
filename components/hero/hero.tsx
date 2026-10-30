@@ -143,6 +143,9 @@ export function Hero(): ReactNode {
             <p className="text-foreground/80 text-[18px] font-medium tracking-tight sm:text-[20px]">
               Hey<span aria-hidden="true">!</span>, I&rsquo;m Vraj
             </p>
+            <p className="text-foreground/55 mt-3 text-[11px] font-medium tracking-[0.14em] uppercase sm:text-[12px]">
+              AI Engineer · Data Scientist · Full Stack Engineer
+            </p>
             <h1 className="text-foreground mt-5 max-w-[11ch] font-serif text-[clamp(3rem,7vw,6.7rem)] leading-[0.94] font-medium tracking-[-0.055em]">
               <span className="block">Building Intelligent</span>
               <span className="block">AI Systems</span>

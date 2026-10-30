@@ -1,21 +1,27 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "Vraj Patel - AI / Applied AI Engineer",
-  description: "Vraj Patel is an AI / Applied AI Engineer building production-ready LLM, RAG, agentic AI, and computer vision systems.",
-  url: "https://iamvrajpatel.github.io",
-  ogImage: "https://iamvrajpatel.github.io/og-image.svg",
+  personName: "Vraj Patel",
+  roleSummary: "AI Engineer, Data Scientist & Full Stack Engineer",
+  name: "Vraj Patel | AI Engineer, Data Scientist & Full Stack Engineer",
+  description:
+    "Vraj Patel is an AI Engineer, Data Scientist, and Full Stack Engineer in Mumbai, India building production AI systems with LLMs, RAG, agentic AI, computer vision, FastAPI, system design, and scalable cloud deployment.",
+  url: "https://ivrajpatel.vercel.app",
+  ogImage: "https://ivrajpatel.vercel.app/og-image.svg",
+  lastUpdated: "2026-10-30",
   creator: "@iamvrajpatel",
   authors: [
     {
       name: "Vraj Patel",
-      url: "https://iamvrajpatel.github.io",
+      url: "https://ivrajpatel.vercel.app",
     },
   ],
   keywords: [
     "Vraj Patel",
     "AI Engineer",
     "Applied AI Engineer",
+    "Data Scientist",
+    "Full Stack Engineer",
     "LLM Engineer",
     "RAG",
     "Agentic AI",
@@ -23,6 +29,9 @@ export const siteConfig = {
     "LangChain",
     "Computer Vision",
     "FastAPI",
+    "System Design",
+    "Production AI",
+    "Mumbai AI Engineer",
     "Portfolio",
   ],
 } as const;
@@ -38,6 +47,8 @@ export const baseMetadata: Metadata = {
   authors: [...siteConfig.authors],
   creator: siteConfig.creator,
   publisher: siteConfig.name,
+  applicationName: siteConfig.name,
+  category: "Professional portfolio",
   robots: {
     index: true,
     follow: true,
@@ -80,6 +91,11 @@ export const baseMetadata: Metadata = {
     apple: "/apple-icon.svg",
   },
   manifest: "/site.webmanifest",
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    },
+  }),
 };
 
 export function createMetadata({
@@ -87,12 +103,14 @@ export function createMetadata({
   description,
   path = "/",
   image,
+  keywords = [],
   noIndex = false,
 }: {
   title?: string;
   description?: string;
   path?: string;
   image?: string;
+  keywords?: readonly string[];
   noIndex?: boolean;
 }): Metadata {
   const url = `${siteConfig.url}${path}`;
@@ -101,6 +119,7 @@ export function createMetadata({
   return {
     title,
     description,
+    keywords: [...siteConfig.keywords, ...keywords],
     alternates: {
       canonical: path,
     },

@@ -1,7 +1,7 @@
 import { ContactCard } from "@/components/contact/contact-card";
 import { Hero } from "@/components/hero/hero";
 import { Projects } from "@/components/projects/projects";
-import { createMetadata, siteConfig } from "@/lib/metadata";
+import { createMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import ClickSpark from "@/components/ClickSpark";
@@ -9,9 +9,16 @@ import { StackLoop } from "@/components/logoLoop/StackLoop";
 import { Experience } from "@/components/about/experience";
 
 export const metadata: Metadata = createMetadata({
-  title: "Home",
-  description: `Welcome to ${siteConfig.name}. ${siteConfig.description}`,
+  title: "AI Engineer, Data Scientist & Full Stack Engineer",
+  description:
+    "Vraj Patel is an AI Engineer, Data Scientist, and Full Stack Engineer in Mumbai building production-ready LLM, RAG, agentic AI, computer vision, FastAPI, and scalable system-design solutions.",
   path: "/",
+  keywords: [
+    "AI Engineer Mumbai",
+    "Data Scientist Mumbai",
+    "Full Stack Engineer Mumbai",
+    "Production AI Engineer",
+  ],
 });
 
 export default function HomePage(): ReactNode {
