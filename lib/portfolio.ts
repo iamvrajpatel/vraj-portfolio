@@ -70,7 +70,7 @@ export const projects: readonly Project[] = [
     shortTitle: "Qwen Fine-Tuning",
     title: "Qwen Fine-Tuning for Entrance Exam Question Generation",
     description:
-      "Source-grounded fine-tuning pipeline for PCM entrance-exam question generation, including dataset engineering, semantic validation, supervised fine-tuning, and structured question generation.",
+      "Source-grounded fine-tuning pipeline for entrance-exam question generation, including dataset engineering, semantic validation, supervised fine-tuning, and structured question generation.",
     stack: ["Python", "Qwen3-1.7B", "QLoRA", "LoRA", "TRL", "FastAPI"],
     githubUrl: "https://github.com/iamvrajpatel/qwen-finetune-q-gen",
     image: "/images/projects/qwen-finetuning.png",
