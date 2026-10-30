@@ -6,7 +6,7 @@ export function Skills(): ReactNode {
   return (
     <div className="flex flex-col gap-3">
       <Shuffle
-        text="AI engineering toolkit"
+        text="AI Engineering Toolkit"
         tag="h3"
         className="font-serif text-[1.125rem] font-semibold tracking-tight text-foreground sm:text-[1.25rem]"
         shuffleDirection="right"

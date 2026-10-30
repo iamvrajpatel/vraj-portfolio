@@ -7,7 +7,16 @@ export type Project = {
   githubUrl: string;
   image: string;
   imageAlt: string;
-  icon: "scale" | "brain" | "video" | "interview" | "face";
+  icon:
+    | "scale"
+    | "brain"
+    | "video"
+    | "interview"
+    | "face"
+    | "purchasing"
+    | "affirmation"
+    | "audio"
+    | "chat";
 };
 
 export type ExperienceEntry = {
@@ -21,7 +30,7 @@ export const portfolio = {
   person: {
     name: "Vraj Patel",
     designation: "AI / Applied AI Engineer",
-    location: "Mumbai, India",
+    location: "Mumbai, India - Remote",
     email: "vjp21112@gmail.com",
     phone: "+91 9313553359",
     phoneHref: "tel:+919313553359",
@@ -104,16 +113,66 @@ export const projects: readonly Project[] = [
     imageAlt: "Monochrome concept visual for a face-verification API",
     icon: "face",
   },
+  {
+    id: "ai-purchasing-agent",
+    shortTitle: "AI Purchasing Agent",
+    title: "AI Purchasing Agent — Supply Chain Automation",
+    description:
+      "AI-assisted buyer workflow for supply-chain operations, combining restricted tool calls, deterministic replenishment and constraint checks, human approval, idempotent purchase-order execution, and recovery validation.",
+    stack: ["Python", "FastAPI", "OpenAI", "PostgreSQL", "SQLAlchemy", "Docker"],
+    githubUrl: "https://github.com/iamvrajpatel/ai-purchasing-agent",
+    image: "/images/projects/ai-purchasing-agent.svg",
+    imageAlt: "Monochrome concept visual for the AI Purchasing Agent supply-chain workflow",
+    icon: "purchasing",
+  },
+  {
+    id: "369-affirmations",
+    shortTitle: "Divine 369",
+    title: "Divine 369 Affirmation Typing App",
+    description:
+      "Browser-based affirmation-writing ritual with a monkeytype-inspired typing flow, a configurable affirmation library, date-wise writing logs, and 3-6-9 calendar streak tracking.",
+    stack: ["Python", "FastAPI", "JavaScript", "HTML/CSS", "JSON Storage"],
+    githubUrl: "https://github.com/iamvrajpatel/369-affirmations",
+    image: "/images/projects/369-affirmations.svg",
+    imageAlt: "Monochrome concept visual for the Divine 369 affirmation typing application",
+    icon: "affirmation",
+  },
+  {
+    id: "tts-api",
+    shortTitle: "TTS & Voice Cloning",
+    title: "Multilingual TTS & Voice-Cloning API",
+    description:
+      "GPU-ready FastAPI service powered by Coqui XTTS v2 for Hindi and English speech synthesis and reference-audio voice cloning, with chunked generation, concurrency control, and MP3 responses.",
+    stack: ["Python", "FastAPI", "Coqui TTS", "XTTS v2", "PyTorch", "CUDA"],
+    githubUrl: "https://github.com/iamvrajpatel/TTS-API",
+    image: "/images/projects/tts-api.svg",
+    imageAlt: "Monochrome concept visual for a multilingual text-to-speech and voice-cloning API",
+    icon: "audio",
+  },
+  {
+    id: "inquiry-chatbot",
+    shortTitle: "Inquiry Assistant",
+    title: "Agentic Inquiry Assistant",
+    description:
+      "Guardrailed agentic RAG chatbot for company inquiries, with query validation, context retrieval, grounded-response verification, Chroma knowledge management, and a Streamlit admin portal.",
+    stack: ["Python", "FastAPI", "LangGraph", "ChromaDB", "OpenAI", "Gemini", "Streamlit"],
+    githubUrl: "https://github.com/iamvrajpatel/inquiry-chatbot",
+    image: "/images/projects/inquiry-chatbot.svg",
+    imageAlt: "Monochrome concept visual for the agentic inquiry assistant",
+    icon: "chat",
+  },
 ];
 
 export const skillCategories = [
-  { name: "LLM & Generative AI", skills: ["LLMs", "Prompt Engineering", "Function Calling", "MCP", "Structured Outputs", "Guardrails"] },
-  { name: "Agentic AI", skills: ["LangGraph", "LangChain", "Multi-Agent Systems", "Agent Orchestration", "Agent Memory", "HITL"] },
-  { name: "RAG & Retrieval", skills: ["Pinecone", "FAISS", "Embeddings", "Semantic Search", "Hybrid Search", "Reranking"] },
-  { name: "Machine Learning", skills: ["PyTorch", "TensorFlow", "scikit-learn", "NLP", "YOLOv8", "OpenCV", "OCR"] },
-  { name: "Backend", skills: ["Python", "FastAPI", "Flask", "REST APIs", "WebSockets", "Async Processing"] },
-  { name: "Cloud & MLOps", skills: ["Docker", "GCP", "Google Cloud Run", "AWS", "CI/CD", "MLflow", "Model Serving"] },
-  { name: "Databases", skills: ["MongoDB", "MySQL", "SQLite", "Vector Databases"] },
+  { name: "LLM & Generative AI", skills: ["LLMs", "Prompt Engineering", "Tool Calling", "MCP", "Structured Outputs", "Context Engineering", "LLM Serving", "Guardrails"] },
+  { name: "Agentic AI", skills: ["LangGraph", "LangChain", "Multi-Agent Systems", "Agent Orchestration", "Stateful Agents", "Agent Memory", "HITL", "Secure Action Execution"] },
+  { name: "RAG & Retrieval", skills: ["Pinecone", "FAISS", "Embeddings", "Chunking Strategies", "Semantic Search", "Hybrid Search", "Reranking", "Retrieval Evaluation", "Citation-Aware Retrieval"] },
+  { name: "Machine Learning", skills: ["PyTorch", "TensorFlow", "scikit-learn", "NLP", "YOLOv8", "OpenCV", "OCR", "Face Recognition"] },
+  { name: "System Design", skills: ["Distributed Systems", "Scalable Architecture", "Caching", "Rate Limiting", "Fault Tolerance", "Latency & Throughput"] },
+  { name: "Full Stack Engineering", skills: ["MEAN", "MERN","API Integration", "RestAPIs", "WebSockets", "WebRTC"] },
+  { name: "Backend", skills: ["Python", "FastAPI", "Flask", "Microservices", "API Security", "Async Processing", "Async Job Queues", "Streaming APIs"] },
+  { name: "Cloud, LLMOps & MLOps", skills: ["Docker", "GCP", "Google Cloud Run", "AWS", "CI/CD", "MLflow", "LLM Evaluation", "Observability & Tracing", "Model Serving", "Autoscaling", "Production Reliability"] },
+  { name: "Databases", skills: ["MongoDB", "MySQL", "SQLite", "Vector Databases", "PostgreSQL"] },
 ] as const;
 
 export const experience: readonly ExperienceEntry[] = [

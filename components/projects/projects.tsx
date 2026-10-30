@@ -2,11 +2,15 @@
 
 import {
   ArrowRight,
+  AudioLines,
   BrainCircuit,
   ContactRound,
   Github,
+  Heart,
+  MessageCircle,
   ScanFace,
   Scale,
+  ShoppingCart,
   Video,
 } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
@@ -26,6 +30,10 @@ const PROJECT_ICONS: Record<
   video: Video,
   interview: ContactRound,
   face: ScanFace,
+  purchasing: ShoppingCart,
+  affirmation: Heart,
+  audio: AudioLines,
+  chat: MessageCircle,
 };
 
 export type ProjectsProps = {

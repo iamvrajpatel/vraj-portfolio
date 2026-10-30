@@ -127,7 +127,7 @@ export function Hero(): ReactNode {
 
   return (
     <section className="relative w-full" aria-label="Introduction">
-      <div className="mx-auto grid w-full max-w-360 grid-cols-1 px-6 pt-24 sm:px-10 sm:pt-32 lg:grid-cols-[minmax(0,0.9fr)_minmax(28rem,1.1fr)] lg:gap-12 lg:px-12 xl:px-16">
+      <div className="mx-auto grid w-full max-w-360 grid-cols-1 px-6 pt-24 sm:px-10 sm:pt-32 lg:grid-cols-[minmax(0,0.9fr)_minmax(28rem,1.1fr)] lg:gap-12 lg:px-12 lg:pt-0 xl:px-16">
         <div className="order-2 min-w-0 lg:order-1">
           <HeroVisual
             activeStep={activeStep}
@@ -170,11 +170,11 @@ export function Hero(): ReactNode {
               I combine model capabilities with dependable software design to turn AI experiments into production-oriented workflows.
             </p>
             <div className="mt-10 grid max-w-160 gap-3 sm:grid-cols-2">
-              {skillCategories.slice(0, 4).map((category, index) => (
+              {skillCategories.slice(0, 9).map((category, index) => (
                 <article key={category.name} className="border-foreground/8 bg-foreground/2 rounded-3xl border p-5">
                   <span className="text-foreground/38 text-[12px] font-medium tracking-widest">0{index + 1}</span>
                   <h3 className="text-foreground mt-6 text-[18px] font-semibold tracking-tight">{category.name}</h3>
-                  <p className="text-foreground/58 mt-2 text-[13px] leading-relaxed tracking-tight">{category.skills.slice(0, 3).join(" · ")}</p>
+                  <p className="text-foreground/58 mt-2 text-[13px] leading-relaxed tracking-tight">{category.skills.slice(0, 8).join(" · ")}</p>
                 </article>
               ))}
             </div>
@@ -208,7 +208,7 @@ export function Hero(): ReactNode {
           prefersReducedMotion={prefersReducedMotion}
           onPointerMove={handlePointerMove}
           onPointerLeave={resetPointer}
-          className="order-1 hidden self-start lg:sticky lg:top-0 lg:order-2 lg:flex lg:h-svh lg:items-center"
+          className="order-1 hidden self-start lg:sticky lg:top-6 lg:order-2 lg:flex lg:h-[calc(100svh-3rem)] lg:items-center"
         />
       </div>
     </section>
@@ -248,7 +248,7 @@ const HeroVisual = forwardRef<HTMLDivElement, {
 
   return (
     <div ref={ref} aria-hidden="true" className={`relative w-full ${className ?? ""}`} onPointerMove={onPointerMove} onPointerLeave={onPointerLeave}>
-      <div className="relative mx-auto aspect-[0.79] w-full max-w-165 overflow-hidden rounded-[2rem] border border-foreground/12 bg-foreground/[0.035] p-2 shadow-2xl sm:rounded-[2.5rem] sm:p-3">
+      <div className="relative mx-auto aspect-[0.79] w-full max-w-165 overflow-hidden rounded-[2rem] border border-foreground/12 bg-foreground/[0.035] p-2 shadow-2xl sm:rounded-[2.5rem] sm:p-3 lg:h-full lg:w-auto lg:max-w-full">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_18%,rgba(255,255,255,0.18),transparent_22%),radial-gradient(circle_at_28%_78%,rgba(255,255,255,0.09),transparent_36%)]" />
         <div className="absolute inset-[8%] rounded-[1.7rem] border border-foreground/15" />
         <div className="absolute -right-[30%] bottom-[9%] h-[60%] w-[86%] rounded-full border border-foreground/15" />
@@ -260,14 +260,14 @@ const HeroVisual = forwardRef<HTMLDivElement, {
         </motion.div>
 
         <AnimatePresence mode="wait">
-          <motion.div key={activeStep.id} initial={prefersReducedMotion ? false : { opacity: 0, y: 12, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -8, scale: prefersReducedMotion ? 1 : 0.97 }} transition={{ duration: prefersReducedMotion ? 0 : 0.38, ease: [0.22, 1, 0.36, 1] }} className="absolute right-3 top-[23%] max-w-[58%] rounded-2xl border border-white/18 bg-black/72 px-4 py-3 text-white shadow-2xl backdrop-blur-md sm:right-5 sm:px-5 sm:py-4">
-            <div className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/20 bg-white/8"><Icon className="h-4 w-4" /></span><div><p className="text-[10px] font-medium tracking-[0.14em] text-white/55 uppercase">{activeStep.card.eyebrow}</p><p className="mt-0.5 text-[14px] font-semibold tracking-tight sm:text-[16px]">{activeStep.card.title}</p></div></div>
+          <motion.div key={activeStep.id} initial={prefersReducedMotion ? false : { opacity: 0, y: 12, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -8, scale: prefersReducedMotion ? 1 : 0.97 }} transition={{ duration: prefersReducedMotion ? 0 : 0.38, ease: [0.22, 1, 0.36, 1] }} className="absolute left-2 top-[10%] max-w-[43%] rounded-xl border border-white/18 bg-black/72 px-2 py-1.5 text-white shadow-2xl backdrop-blur-md sm:left-4 sm:max-w-[45%] sm:px-2.5 sm:py-2 lg:left-5 lg:px-3 lg:py-2.5">
+            <div className="flex items-center gap-1.5 sm:gap-2"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-white/20 bg-white/8 sm:h-7 sm:w-7 lg:h-8 lg:w-8"><Icon className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-3.5 lg:w-3.5" /></span><div><p className="text-[7px] font-medium tracking-[0.1em] text-white/55 uppercase sm:text-[8px] lg:text-[9px]">{activeStep.card.eyebrow}</p><p className="mt-0.5 text-[clamp(0.65rem,1.2vw,0.82rem)] leading-tight font-semibold tracking-tight">{activeStep.card.title}</p></div></div>
           </motion.div>
         </AnimatePresence>
 
         <AnimatePresence mode="wait">
-          <motion.div key={`${activeStep.id}-detail`} initial={prefersReducedMotion ? false : { opacity: 0, y: 16, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: prefersReducedMotion ? 0 : 8, scale: prefersReducedMotion ? 1 : 0.97 }} transition={{ duration: prefersReducedMotion ? 0 : 0.4, delay: prefersReducedMotion ? 0 : 0.06, ease: [0.22, 1, 0.36, 1] }} className="absolute bottom-[9%] right-3 max-w-[58%] rounded-2xl border border-white/18 bg-black/72 px-4 py-3 text-white shadow-2xl backdrop-blur-md sm:right-5 sm:px-5 sm:py-4">
-            <div className="flex items-start gap-3"><span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10"><Eye className="h-4 w-4" /></span><p className="text-[12px] leading-snug tracking-tight text-white/82 sm:text-[14px]">{activeStep.card.details}</p></div>
+          <motion.div key={`${activeStep.id}-detail`} initial={prefersReducedMotion ? false : { opacity: 0, y: 16, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: prefersReducedMotion ? 0 : 8, scale: prefersReducedMotion ? 1 : 0.97 }} transition={{ duration: prefersReducedMotion ? 0 : 0.4, delay: prefersReducedMotion ? 0 : 0.06, ease: [0.22, 1, 0.36, 1] }} className="absolute bottom-[7%] right-2 max-w-[43%] rounded-xl border border-white/18 bg-black/72 px-2 py-1.5 text-white shadow-2xl backdrop-blur-md sm:right-4 sm:max-w-[45%] sm:px-2.5 sm:py-2 lg:right-5 lg:px-3 lg:py-2.5">
+            <div className="flex items-start gap-1.5 sm:gap-2"><span className="mt-0.5 flex h-5.5 w-5.5 shrink-0 items-center justify-center rounded-md bg-white/10 sm:h-6 sm:w-6 lg:h-7 lg:w-7"><Eye className="h-2.5 w-2.5 sm:h-3 sm:w-3 lg:h-3.5 lg:w-3.5" /></span><p className="text-[clamp(0.57rem,1vw,0.74rem)] leading-snug tracking-tight text-white/82">{activeStep.card.details}</p></div>
           </motion.div>
         </AnimatePresence>
       </div>
