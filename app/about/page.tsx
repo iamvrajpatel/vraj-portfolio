@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = createMetadata({
-  title: "About Vraj Patel — AI Engineer, Data Scientist & Full Stack Engineer",
+  title: "About Vraj Patel — AI Full Stack Engineer & Data Scientist",
   description:
     "Learn about Vraj Patel's experience as an AI Engineer, Data Scientist, and Full Stack Engineer across LLMs, RAG, agentic AI, computer vision, system design, FastAPI, and production systems.",
   path: "/about",

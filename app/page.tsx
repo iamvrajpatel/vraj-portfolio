@@ -9,7 +9,7 @@ import { StackLoop } from "@/components/logoLoop/StackLoop";
 import { Experience } from "@/components/about/experience";
 
 export const metadata: Metadata = createMetadata({
-  title: "AI Engineer, Data Scientist & Full Stack Engineer",
+  title: "AI Full Stack Engineer & Data Scientist",
   description:
     "Vraj Patel is an AI Engineer, Data Scientist, and Full Stack Engineer in Mumbai building production-ready LLM, RAG, agentic AI, computer vision, FastAPI, and scalable system-design solutions.",
   path: "/",

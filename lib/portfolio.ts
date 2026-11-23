@@ -49,45 +49,21 @@ export const portfolio = {
       "AI / Applied AI Engineer specializing in LLMs, Agentic AI, RAG, Computer Vision, and Production AI Systems.",
   },
   about:
-    "AI / Applied AI Engineer with 2+ years of experience developing production-oriented AI solutions across Large Language Models, Retrieval-Augmented Generation, multi-agent systems, computer vision, OCR, and workflow automation. Experienced in Python, FastAPI, LangChain, LangGraph, Pinecone, model fine-tuning, and scalable AI deployment.",
+    "AI / Applied AI Engineer with 2.5+ years of experience developing production-oriented AI solutions across Large Language Models, Retrieval-Augmented Generation, multi-agent systems, computer vision, OCR, and workflow automation. Experienced in Python, FastAPI, OpenAI SDK, LangChain, LangGraph, Pinecone, Ollama, model fine-tuning, and scalable AI deployment.",
 } as const;
 
 export const projects: readonly Project[] = [
   {
     id: "lawyer-ai",
     shortTitle: "LawyerAI",
-    title: "LawyerAI — Multi-Agent Legal Research Platform",
+    title: "LawyerAI — Multi-Agent Legal Research and Case Advisory Platform",
     description:
       "Case-centric legal AI workspace featuring multi-agent research, evidence management, contextual retrieval, legal reasoning workflows, and configurable agent orchestration.",
-    stack: ["Python", "FastAPI", "LangGraph", "RAG", "MongoDB", "Multi-Agent AI"],
+    stack: ["Python", "FastAPI", "Angular", "MongoDB", "LangGraph", "RAG", "LegalTech"],
     githubUrl: "https://github.com/iamvrajpatel/lawyer-ai",
     image: "/images/projects/lawyer-ai.png",
     imageAlt: "Monochrome concept visual for the LawyerAI multi-agent legal research platform",
     icon: "scale",
-  },
-  {
-    id: "qwen-finetuning",
-    shortTitle: "Qwen Fine-Tuning",
-    title: "Qwen Fine-Tuning for Entrance Exam Question Generation",
-    description:
-      "Source-grounded fine-tuning pipeline for entrance-exam question generation, including dataset engineering, semantic validation, supervised fine-tuning, and structured question generation.",
-    stack: ["Python", "Qwen3-1.7B", "QLoRA", "LoRA", "TRL", "FastAPI"],
-    githubUrl: "https://github.com/iamvrajpatel/qwen-finetune-q-gen",
-    image: "/images/projects/qwen-finetuning.png",
-    imageAlt: "Monochrome concept visual for Qwen model fine-tuning and question generation",
-    icon: "brain",
-  },
-  {
-    id: "lip-sync",
-    shortTitle: "Lip-Sync API",
-    title: "Lip-Sync and Voice-Cloning Video Generation API",
-    description:
-      "AI-powered lip-sync and voice-processing API with asynchronous video generation, inference controls, media preprocessing, and GPU-based processing.",
-    stack: ["Python", "FastAPI", "PyTorch", "Diffusers", "LatentSync", "FFmpeg"],
-    githubUrl: "https://github.com/iamvrajpatel/Lip-Sync",
-    image: "/images/projects/lip-sync.png",
-    imageAlt: "Monochrome concept visual for an AI lip-sync and video-generation API",
-    icon: "video",
   },
   {
     id: "interview-automation",
@@ -95,35 +71,59 @@ export const projects: readonly Project[] = [
     title: "AI Interview Automation Platform",
     description:
       "End-to-end AI interview system supporting resume parsing, automated question generation, face verification, speech transcription, candidate scoring, and hiring recommendations.",
-    stack: ["Python", "Flask", "OpenAI", "Whisper", "FaceNet", "NLP"],
+    stack: ["Python", "Flask", "OpenAI", "Whisper", "MTCNN", "TTS", "NLP"],
     githubUrl: "https://github.com/iamvrajpatel/Interview-Automation",
     image: "/images/projects/interview-automation.png",
     imageAlt: "Monochrome concept visual for an AI interview automation platform",
     icon: "interview",
   },
   {
-    id: "face-verification",
-    shortTitle: "Face Verification API",
-    title: "Face Verification API",
+    id: "treemind-db",
+    shortTitle: "TreeMindDB",
+    title: "TreeMindDB — Local-First Personal Assistant with Inspectable Vector Memory",
     description:
-      "REST API for identity verification using face detection, similarity scoring, configurable confidence thresholds, and structured verification responses.",
-    stack: ["Python", "FastAPI", "DeepFace", "FaceNet", "MTCNN", "OpenCV"],
-    githubUrl: "https://github.com/iamvrajpatel/Face-Authentication-API",
-    image: "/images/projects/face-verification.png",
-    imageAlt: "Monochrome concept visual for a face-verification API",
-    icon: "face",
+      "Local-first personal assistant that separates active context from durable knowledge, using Laya-guided vector-memory tree retrieval, incremental fact synchronization, and visible retrieval paths.",
+    stack: ["Python", "FastAPI", "Next.js", "React Flow", "SQLite", "Ollama", "Laya", "SSE"],
+    githubUrl: "https://github.com/iamvrajpatel/TreeMindDB",
+    image: "/images/projects/treemind-db.svg",
+    imageAlt: "Monochrome concept visual of TreeMindDB's local vector-memory tree and retrieval paths",
+    icon: "brain",
   },
   {
     id: "ai-purchasing-agent",
     shortTitle: "AI Purchasing Agent",
-    title: "AI Purchasing Agent — Supply Chain Automation",
+    title: "AI Purchasing Agent — Human-in-the-Loop Procurement Automation",
     description:
       "AI-assisted buyer workflow for supply-chain operations, combining restricted tool calls, deterministic replenishment and constraint checks, human approval, idempotent purchase-order execution, and recovery validation.",
-    stack: ["Python", "FastAPI", "OpenAI", "PostgreSQL", "SQLAlchemy", "Docker"],
+    stack: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "OpenAI SDK", "Tool Calling", "Docker"],
     githubUrl: "https://github.com/iamvrajpatel/ai-purchasing-agent",
     image: "/images/projects/ai-purchasing-agent.svg",
     imageAlt: "Monochrome concept visual for the AI Purchasing Agent supply-chain workflow",
     icon: "purchasing",
+  },
+  {
+    id: "lip-sync",
+    shortTitle: "Lip-Sync API",
+    title: "Lip-Sync and Voice-Cloning Deepfake Video Generation API",
+    description:
+      "AI-powered lip-sync and voice-processing API with asynchronous video generation, LivePortrait reference-video generation, inference controls, media preprocessing, and GPU-based processing.",
+    stack: ["Python", "FastAPI", "Gradio", "PyTorch", "Diffusers", "LatentSync", "LivePortrait", "FFmpeg"],
+    githubUrl: "https://github.com/iamvrajpatel/Lip-Sync",
+    image: "/images/projects/lip-sync.png",
+    imageAlt: "Monochrome concept visual for an AI lip-sync and video-generation API",
+    icon: "video",
+  },
+  {
+    id: "qwen-finetuning",
+    shortTitle: "Qwen Fine-Tuning",
+    title: "Qwen Fine-Tuning for PCM Question Generation",
+    description:
+      "Source-grounded dataset-prep and fine-tuning pipeline with NCERT retrieval, semantic validation, duplicate rejection, train/eval splits, and structured JSON question outputs.",
+    stack: ["Python", "Qwen3-1.7B", "QLoRA", "LoRA", "TRL SFTTrainer", "FastAPI", "SQLite", "Dataset Engineering"],
+    githubUrl: "https://github.com/iamvrajpatel/qwen-finetune-q-gen",
+    image: "/images/projects/qwen-finetuning.png",
+    imageAlt: "Monochrome concept visual for Qwen model fine-tuning and question generation",
+    icon: "brain",
   },
   {
     id: "369-affirmations",
@@ -164,13 +164,13 @@ export const projects: readonly Project[] = [
 ];
 
 export const skillCategories = [
-  { name: "LLM & Generative AI", skills: ["LLMs", "Prompt Engineering", "Tool Calling", "MCP", "Structured Outputs", "Context Engineering", "LLM Serving", "Guardrails"] },
-  { name: "Agentic AI", skills: ["LangGraph", "LangChain", "Multi-Agent Systems", "Agent Orchestration", "Stateful Agents", "Agent Memory", "HITL", "Secure Action Execution"] },
-  { name: "RAG & Retrieval", skills: ["Pinecone", "FAISS", "Embeddings", "Chunking Strategies", "Semantic Search", "Hybrid Search", "Reranking", "Retrieval Evaluation", "Citation-Aware Retrieval"] },
+  { name: "LLM & Generative AI", skills: ["LLMs", "Prompt Engineering", "OpenAI SDK", "Tool Calling", "MCP", "Structured Outputs", "Context Engineering", "LLM Serving", "Guardrails"] },
+  { name: "Agentic AI", skills: ["LangGraph", "LangChain", "Laya", "Multi-Agent Systems", "Agent Orchestration", "Stateful Agents", "Agent Memory", "HITL", "Secure Action Execution"] },
+  { name: "RAG & Retrieval", skills: ["Pinecone", "FAISS", "Embeddings", "Local Vector Memory", "Chunking Strategies", "Semantic Search", "Hybrid Search", "Reranking", "Retrieval Evaluation", "Citation-Aware Retrieval"] },
   { name: "Machine Learning", skills: ["PyTorch", "TensorFlow", "scikit-learn", "NLP", "YOLOv8", "OpenCV", "OCR", "Face Recognition"] },
   { name: "System Design", skills: ["Distributed Systems", "Scalable Architecture", "Caching", "Rate Limiting", "Fault Tolerance", "Latency & Throughput"] },
-  { name: "Full Stack Engineering", skills: ["MEAN", "MERN","API Integration", "RestAPIs", "WebSockets", "WebRTC"] },
-  { name: "Backend", skills: ["Python", "FastAPI", "Flask", "Microservices", "API Security", "Async Processing", "Async Job Queues", "Streaming APIs"] },
+  { name: "Full Stack Engineering", skills: ["MEAN", "MERN", "Next.js", "TypeScript", "React", "React Flow", "Jinja2", "API Integration", "REST APIs", "WebSockets", "WebRTC"] },
+  { name: "Backend", skills: ["Python", "FastAPI", "Flask", "Microservices", "API Security", "Async Processing", "Async Job Queues", "Server-Sent Events", "Streaming APIs"] },
   { name: "Cloud, LLMOps & MLOps", skills: ["Docker", "GCP", "Google Cloud Run", "AWS", "CI/CD", "MLflow", "LLM Evaluation", "Observability & Tracing", "Model Serving", "Autoscaling", "Production Reliability"] },
   { name: "Databases", skills: ["MongoDB", "MySQL", "SQLite", "Vector Databases", "PostgreSQL"] },
 ] as const;
@@ -211,7 +211,7 @@ export const experience: readonly ExperienceEntry[] = [
 ];
 
 export const education = [
-  { school: "Indian Institute of Quantitative Finance", degree: "Post Graduate Program in Algorithmic Trading", period: "Oct 2025 – Expected March 2027" },
+  { school: "Indian Institute of Quantitative Finance", degree: "Post-Graduate Program in Algorithmic Trading", period: "October 2025 – February 2027" },
   { school: "G H Patel College of Engineering and Technology", degree: "B.E. Computer Engineering · CPI: 8.2/10", period: "September 2020 – May 2024" },
 ] as const;
 

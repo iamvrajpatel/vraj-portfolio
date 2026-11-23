@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   personName: "Vraj Patel",
-  roleSummary: "AI Engineer, Data Scientist & Full Stack Engineer",
-  name: "Vraj Patel | AI Engineer, Data Scientist & Full Stack Engineer",
+  roleSummary: "AI Full Stack Engineer & Data Scientist",
+  name: "Vraj Patel | AI Full Stack Engineer & Data Scientist",
   description:
     "Vraj Patel is an AI Engineer, Data Scientist, and Full Stack Engineer in Mumbai, India building production AI systems with LLMs, RAG, agentic AI, computer vision, FastAPI, system design, and scalable cloud deployment.",
   url: "https://ivrajpatel.vercel.app",
